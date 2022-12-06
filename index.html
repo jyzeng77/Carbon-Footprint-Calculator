@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <!--    MADE BY JERRY ZENG >,<    -->
+  <!--   Completed on 31/12/2021    -->
+  <!--      Made over 3 days        -->
+  <!-- My best HTML+CSS+JS work yet -->
+  <head>
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Carbon Footprint Calculator</title>
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS Stylesheets -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <!-- Calculator Interface -->
+    <div class="flex-container">
+      <div class="mdc-card">
+        <div class="mdc-card__content interface">
+          <div class="mdc-typography--headline5" id="header">Carbon Footprint Calculator</div>
+          <div class="mdc-typography--subtitle2" id="subtitle">
+            Calculate how much your activities affect the environment.
+          </div>
+        </div>
+
+        <div class="mdc-card__media mdc-card__media--16-9 picture interface" id="image"></div>
+        
+        <div class="mdc-card__content interface" id="radio-container">
+          <div class="mdc-form-field">
+            <div class="mdc-radio">
+              <input class="mdc-radio__native-control" type="radio" id="gas" name="fuel" value="g" checked>
+              <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+              </div>
+              <div class="mdc-radio__ripple"></div>
+            </div>
+            <label for="radio-1">Gasoline</label>
+            <div class="mdc-radio">
+              <input class="mdc-radio__native-control" type="radio" id="diesel" name="fuel" value="d">
+              <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+              </div>
+              <div class="mdc-radio__ripple"></div>
+            </div>
+            <label for="radio-2">Diesel</label>
+          </div>
+        </div>
+
+        <div class="mdc-card__content interface" id="input-container">
+          <span width="100%">
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--end-aligned" style="width:100%;">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="input-label"></span>
+              <span class="mdc-text-field__affix mdc-text-field__affix--prefix" id="input-prefix"></span>
+              <input class="mdc-text-field__input" type="number" aria-labelledby="input-label" tab-index="1" id="input">
+              <span class="mdc-text-field__affix mdc-text-field__affix--suffix" id="input-suffix"></span>
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <div class="mdc-text-field-helper-line">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent" id="input-helper" aria-hidden="true"></div>
+            </div>
+          </span>
+        </div>
+
+        <div class="mdc-card__primary-action interface" tab-index="1">
+          <button class="mdc-button mdc-card__action--button" id="next-button" onclick="nextSlide()">Start</button>
+          <div class="mdc-card__ripple"></div>
+        </div>
+        
+        <div id="results">
+          <div class="mdc-typography--headline1 center-text mdc-theme--primary" id='results-emissions-mth'>Hi</div>
+          <div class="mdc-typography--headline5 center-text mdc-theme--primary">
+            pounds CO<sub>2</sub>e per month
+          </div>
+          <div class="mdc-typography--subtitle2 center-text mdc-theme--secondary">
+            That's the equivalent of <span id="trees"></span> trees. 🌳
+          </div>
+          <br><br>
+          <div class="mdc-typography--body1">
+            Using the data you provided, we estimated how much carbon emissions you emit monthly, as shown above. You may have noticed the "e" in CO<sub>2</sub>e. CO<sub>2</sub>e stands for the "<a class="mdc-theme--primary" href="https://ecometrica.com/assets/GHGs-CO2-CO2e-and-Carbon-What-Do-These-Mean-v2.1.pdf">carbon dioxide equivalent</a>," which tells you how much CO<sub>2</sub> is needed to be released in order to have the same amount of environmental impact. Since there are many different greenhouse gases other than carbon dioxide, scientists use the carbon dioxide equivalent to compare the effects of these gases in a standardized way. 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

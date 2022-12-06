@@ -1,0 +1,58 @@
+:root{
+  --mdc-theme-primary: #26a69a;
+  --mdc-theme-secondary: #81c784;
+
+  --mdc-typography-headline5-font-family: 'Bebas Neue', cursive;
+  --mdc-typography-headline1-font-family: 'Bebas Neue', cursive;
+  --mdc-typography-font-family: 'Roboto Mono', monospace;
+  --mdc-typography-body1-font-size: 12px;
+}
+
+body{
+  background: transparent;
+}
+
+/* Source: https://www.publicdomainpictures.net/en/view-image.php?image=16891&picture=industrial-pollution */ 
+.picture{
+  background-image: url('https://www.publicdomainpictures.net/pictures/20000/velka/industrial-pollution.jpg');
+}
+
+.mdc-card__content{
+  padding: 16px;
+  width: 100%;
+}
+
+.mdc-card{
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-container{
+  display: none;
+  justify-content: center;
+}
+
+#radio-container{
+  display: none;
+}
+
+.mdc-floating-label--float-above{
+  color: var(--mdc-theme-primary) !important;
+}
+
+#results{
+  display: none;
+  margin: 5%;
+}
+
+.center-text{
+  text-align: center;
+  width: 100%;
+}

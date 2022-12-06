@@ -1,0 +1,7 @@
+Embed test link:
+
+https://Carbon-Footprint-Embed-Test.jerrythemouse.repl.co
+
+https://stackoverflow.com/questions/59522406/how-to-activate-material-design-js#
+you need to add mdc.{component}.MDC{component} instead if you use cdn
+
